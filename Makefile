@@ -20,7 +20,7 @@ $(target): $(objs)
 run: $(target)
 	./$(target)
 	
-cleal:
+clean:
 	rm -f $(target) $(objs)
 
 
