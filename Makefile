@@ -1,6 +1,7 @@
 CXX = g++
 
-flags = -Wall -g
+flags = -Wall -std=c++17 
+ldflags = -lSDL2
 
 target = game
 
@@ -12,7 +13,7 @@ objs = $(srcs:.cpp=.o)
 all: $(target)
 
 $(target): $(objs)
-	$(CXX) $(flags) -o $(target) $(objs)
+	$(CXX) $(flags) -o $(target) $(objs) $(ldflags)
 
 %.o: %.cpp
 	$(CXX) $(flags) -c $< -o $@
